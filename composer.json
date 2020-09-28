@@ -1,0 +1,13 @@
+{
+    "name": "geronimo794/php-csv-rw",
+	"description": "Simple read and write csv.",
+	"license": "MIT",
+	"type": "helpers",
+	"version": "1.1.0",
+    "require": {
+		"php": "^5.6.37 || ^7.0" 
+	},
+	"autoload": {
+        "files": ["Csvrw.php"]
+    }
+}
