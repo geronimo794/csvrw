@@ -51,6 +51,8 @@ class Csvrw {
 				$j = 0;
 				$dataSet = [];
 				foreach ($columnData as $perColumnData) {
+					$perColumnData = preg_replace("/\s+|[[:^print:]]/", "", trim($perColumnData));
+
 					// First header is column name
 					if($i == 0){
 						$header[$j] = $perColumnData;
