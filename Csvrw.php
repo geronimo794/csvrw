@@ -57,8 +57,12 @@ class Csvrw {
 						$perColumnData = preg_replace("/\s+|[[:^print:]]/", "", trim($perColumnData));
 						$header[$j] = $perColumnData;
 					}else{
-						if(isset($header[$j])) $dataSet[$header[$j]] = $perColumnData;
-						else $dataSet[$j] = $perColumnData;
+
+						
+						if(isset($header[$j])){
+							if(!empty($perColumnData))
+								$dataSet[$header[$j]] = $perColumnData;
+						}else $dataSet[$j] = $perColumnData;
 					}
 					$j++;
 				}
